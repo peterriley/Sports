@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.705
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Soccer.BL", "Soccer.BL\Soccer.BL.csproj", "{9D2C764F-1502-4432-AEF2-2BBB4D39F245}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Soccer.DAL", "Soccer.BL\Soccer.DAL.csproj", "{9D2C764F-1502-4432-AEF2-2BBB4D39F245}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Soccer.BLTest", "Soccer.BLTest\Soccer.BLTest.csproj", "{3DC1E381-3522-4262-85D7-E1BF564C9EE0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Soccer.DALTest", "Soccer.BLTest\Soccer.DALTest.csproj", "{3DC1E381-3522-4262-85D7-E1BF564C9EE0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Soccer.Repository", "Soccer.Repository\Soccer.Repository.csproj", "{FA0D60B4-73D6-49DC-BDF8-7E5613707513}"
 EndProject

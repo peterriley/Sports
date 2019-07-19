@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Soccer.BL\Soccer.BL.csproj" />
+    <ProjectReference Include="..\Soccer.BL\Soccer.DAL.csproj" />
     <ProjectReference Include="..\Soccer.Repository\Soccer.Repository.csproj" />
   </ItemGroup>
 
