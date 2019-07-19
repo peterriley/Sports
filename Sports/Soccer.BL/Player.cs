@@ -1,4 +1,6 @@
-﻿namespace Soccer.BL
+﻿using System.Collections.Generic;
+
+namespace Soccer.BL
 {
     public class Player
     {
@@ -52,6 +54,7 @@
         public string Nationality { get; set; }
         public int TeamId { get; set; }
         public static int InstanceCount { get; set; }
+        public List<Team> TeamName { get; set; }
 
         /// <summary>
         /// Validates the player data.

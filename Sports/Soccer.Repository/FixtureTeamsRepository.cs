@@ -30,8 +30,8 @@ namespace Soccer.Repository
             {
                 fixtureTeams.HomeTeamName = "Fulchester United";
                 fixtureTeams.AwayTeamName = "Viz FC";
-                fixtureTeams.HomeTeamList = playerRepository.RetrieveByTeamId(1).ToList();
-                fixtureTeams.AwayTeamList = playerRepository.RetrieveByTeamId(2).ToList();
+                fixtureTeams.HomeTeamPlayerList = playerRepository.RetrieveByTeamId(1).ToList();
+                fixtureTeams.AwayTeamPlayerList = playerRepository.RetrieveByTeamId(2).ToList();
             }
 
             return fixtureTeams;
@@ -41,11 +41,38 @@ namespace Soccer.Repository
         /// Retrieve all fixture teams.
         /// </summary>
         /// <returns></returns>
-        public List<FixtureTeams> Retrieve()
+        public FixtureTeams Retrieve()
         {
             // Code that retrieves all of the fixture teams
+            List<Team> homeTeamList = new List<Team>() {
+                new Team(){TeamId = 1, Name = "Arsenal"},
+                new Team(){TeamId = 2, Name = "Aston Villa"},
+                new Team(){TeamId = 3, Name = "Chelsea"},
+                new Team(){TeamId = 4, Name = "Liverpool"},
+                new Team(){TeamId = 5, Name = "Manchester City"},
+                new Team(){TeamId = 6, Name = "Manchester United"},
+            };
+            List<string> homeTeamName = homeTeamList.Select(ht => ht.Name).ToList();
+            List<Team> awayTeamList = new List<Team>() {
+                new Team(){TeamId = 1, Name = "Arsenal"},
+                new Team(){TeamId = 2, Name = "Aston Villa"},
+                new Team(){TeamId = 3, Name = "Chelsea"},
+                new Team(){TeamId = 4, Name = "Liverpool"},
+                new Team(){TeamId = 5, Name = "Manchester City"},
+                new Team(){TeamId = 6, Name = "Manchester United"},
+            };
+            List<string> awayTeamName = awayTeamList.Select(ht => ht.Name).ToList();
 
-            return new List<FixtureTeams>();
+            FixtureTeams fixtureTeams = new FixtureTeams()
+            {
+                FixtureTeamsId = 1,
+                HomeTeamList = homeTeamList,
+                AwayTeamList = awayTeamList
+            };
+            
+
+
+            return fixtureTeams;
         }
 
         /// <summary>
