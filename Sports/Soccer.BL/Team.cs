@@ -22,7 +22,7 @@ namespace Soccer.BL
             PlayerList = new List<Player>();
         }
 
-        public int TeamId { get; private set; }
+        public int TeamId { get; set; }
         public string Name { get; set; }
 
         public List<Player> PlayerList { get; set; }

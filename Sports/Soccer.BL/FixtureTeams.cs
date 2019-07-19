@@ -19,15 +19,21 @@ namespace Soccer.BL
         {
             FixtureTeamsId = fixtureTeamsId;
             // To prevent a null value exception to FixtureEventList, create an instance of HomeTeamList & AwayTeamList
-            HomeTeamList = new List<Player>();
-            AwayTeamList = new List<Player>();
+            HomeTeamList = new List<Team>();
+            AwayTeamList = new List<Team>();
+            HomeTeamPlayerList = new List<Player>();
+            AwayTeamPlayerList = new List<Player>();
         }
 
-        public int FixtureTeamsId { get; private set; }
+        public int FixtureTeamsId { get; set; }
+        public int HomeTeamId { get; set; }
+        public int AwayTeamId { get; set; }
         public string HomeTeamName { get; set; }
         public string AwayTeamName { get; set; }
-        public List<Player> HomeTeamList { get; set; }
-        public List<Player> AwayTeamList { get; set; }
+        public List<Team> HomeTeamList { get; set; }
+        public List<Team> AwayTeamList { get; set; }
+        public List<Player> HomeTeamPlayerList { get; set; }
+        public List<Player> AwayTeamPlayerList { get; set; }
 
 
         /// <summary>
@@ -40,6 +46,8 @@ namespace Soccer.BL
 
             if (HomeTeamList == null) isValid = false;
             if (AwayTeamList == null) isValid = false;
+            if (HomeTeamPlayerList == null) isValid = false;
+            if (AwayTeamPlayerList == null) isValid = false;
 
             return isValid;
         }

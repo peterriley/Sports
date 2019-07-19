@@ -18,7 +18,7 @@ namespace Soccer.BLTest
             var expected = new FixtureTeams(1)
             {
                 HomeTeamName = "Fulchester United",
-                HomeTeamList = new List<Player>()
+                HomeTeamPlayerList = new List<Player>()
                 {
                     new Player(1)
                     {
@@ -43,7 +43,7 @@ namespace Soccer.BLTest
                     }
                 },
                 AwayTeamName = "Viz FC",
-                AwayTeamList = new List<Player>()
+                AwayTeamPlayerList = new List<Player>()
                 {
                     new Player(1)
                     {
@@ -77,17 +77,31 @@ namespace Soccer.BLTest
             Assert.AreEqual(expected.AwayTeamName, actual.AwayTeamName);
             for (int i = 0; i < 3; i++)
             {
-                Assert.AreEqual(expected.HomeTeamList[i].FirstName, actual.HomeTeamList[i].FirstName);
-                Assert.AreEqual(expected.HomeTeamList[i].MiddleName, actual.HomeTeamList[i].MiddleName);
-                Assert.AreEqual(expected.HomeTeamList[i].LastName, actual.HomeTeamList[i].LastName);
-                Assert.AreEqual(expected.HomeTeamList[i].Position, actual.HomeTeamList[i].Position);
-                Assert.AreEqual(expected.AwayTeamList[i].FirstName, actual.AwayTeamList[i].FirstName);
-                Assert.AreEqual(expected.AwayTeamList[i].MiddleName, actual.AwayTeamList[i].MiddleName);
-                Assert.AreEqual(expected.AwayTeamList[i].LastName, actual.AwayTeamList[i].LastName);
-                Assert.AreEqual(expected.AwayTeamList[i].Position, actual.AwayTeamList[i].Position);
+                Assert.AreEqual(expected.HomeTeamPlayerList[i].FirstName, actual.HomeTeamPlayerList[i].FirstName);
+                Assert.AreEqual(expected.HomeTeamPlayerList[i].MiddleName, actual.HomeTeamPlayerList[i].MiddleName);
+                Assert.AreEqual(expected.HomeTeamPlayerList[i].LastName, actual.HomeTeamPlayerList[i].LastName);
+                Assert.AreEqual(expected.HomeTeamPlayerList[i].Position, actual.HomeTeamPlayerList[i].Position);
+                Assert.AreEqual(expected.AwayTeamPlayerList[i].FirstName, actual.AwayTeamPlayerList[i].FirstName);
+                Assert.AreEqual(expected.AwayTeamPlayerList[i].MiddleName, actual.AwayTeamPlayerList[i].MiddleName);
+                Assert.AreEqual(expected.AwayTeamPlayerList[i].LastName, actual.AwayTeamPlayerList[i].LastName);
+                Assert.AreEqual(expected.AwayTeamPlayerList[i].Position, actual.AwayTeamPlayerList[i].Position);
             }
 
 
         }
+
+        [TestMethod]
+        public void RetrieveTeamListsTest()
+        {
+            //-- Arrange
+            var fixtureTeamsRepository = new FixtureTeamsRepository();
+
+            //-- Act
+            var actual = fixtureTeamsRepository.Retrieve();
+
+            //-- Assert
+            Assert.AreEqual(1, 1);
+        }
+
     }
 }
