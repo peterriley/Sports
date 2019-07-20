@@ -51,8 +51,8 @@ namespace Soccer.Repository
             // a populated fixture teams
             if (fixtureTeamsId == 1)
             {
-                fixtureTeams.HomeTeamName = "Fulchester United";
-                fixtureTeams.AwayTeamName = "Viz FC";
+                fixtureTeams.HomeTeamName = "Arsenal";
+                fixtureTeams.AwayTeamName = "Aston Villa";
                 fixtureTeams.HomeTeamPlayerList = playerRepository.RetrieveByTeamId(1).ToList();
                 fixtureTeams.AwayTeamPlayerList = playerRepository.RetrieveByTeamId(2).ToList();
             }

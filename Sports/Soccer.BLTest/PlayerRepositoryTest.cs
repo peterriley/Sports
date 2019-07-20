@@ -17,9 +17,9 @@ namespace Soccer.BLTest
             var playerRepository = new PlayerRepository();
             var expected = new Player(1)
             {
-                FirstName = "Billy",
-                MiddleName = "The",
-                LastName = "Fish",
+                FirstName = "Bernd",
+                MiddleName = "",
+                LastName = "Leno",
                 Position = "Goalkeeper"
             };
 

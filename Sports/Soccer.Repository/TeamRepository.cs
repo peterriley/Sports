@@ -33,7 +33,7 @@ namespace Soccer.Repository
             // a populated team
             if (teamId == 1)
             {
-                team.Name = "Fulchester United";
+                team.Name = "Arsenal";
                 team.PlayerList = playerRepository.RetrieveByTeamId(teamId).ToList();
             }
 
